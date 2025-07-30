@@ -39,8 +39,11 @@ Los mismos cambios realizados en la red implementada manualmente deben aplicarse
 ### **4. Documentación del código**
 Agregar comentarios explicativos en cada función, describiendo:
 - Su propósito dentro del flujo de la red.
-- Si corresponde a inicialización, propagación hacia adelante (forward), cálculo de pérdida, retropropagación (backward) o actualización de parámetros.
+- El tipo de etapa en la que esta
 
+![alt text](image-1.png)
+
+Todo el codigo esta en el jupyter
 ---
 
 ### **5. Comparación de la función de pérdida**
