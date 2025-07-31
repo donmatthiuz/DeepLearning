@@ -62,6 +62,20 @@ Todo el codigo esta en el jupyter
 ### **5. Comparación de la función de pérdida**
 Se debe graficar y comparar la evolución de la función de pérdida durante el aprendizaje en ambas redes (implementación manual vs. Pytorch) para evaluar posibles diferencias de convergencia y desempeño.
 
+
+#### Gráfica de la red neuronal implementada de forma manual
+
+![alt text](image-12.png)
+
+#### Gráfica de la red neuronal en pytorch
+
+![alt text](image-11.png)
+
+
+#### Diferencias
+
+Hay que tomar en cuenta que las 2 redes tienen arquitecturas diferentes, la primera solamente tiene 1 capa oculta con 3 neuronas mientras que 1 capa oculta con 16 neuronas. A pesar de eso, ambas redes muestran un comportamiento similar pues el error medio empieza a converger a 0 a partir de 2000 o 3000 iteraciones. La primera red alcanza un menor error porque tiene más iteraciones. Otra diferencia es que el error de la primera red baja drásticamente durante 3 iteraciones y luego empieza a reducirse de forma más lenta, la red de pytorch muestra un decrecimiento lento siempre. 
+
 ---
 
 ## **Preguntas de análisis**
