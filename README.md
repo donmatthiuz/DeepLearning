@@ -65,11 +65,11 @@ Se debe graficar y comparar la evolución de la función de pérdida durante el 
 
 #### Gráfica de la red neuronal implementada de forma manual
 
-![alt text](image-12.png)
+![alt text](imagen-12.png)
 
 #### Gráfica de la red neuronal en pytorch
 
-![alt text](image-11.png)
+![alt text](imagen-11.png)
 
 
 #### Diferencias
