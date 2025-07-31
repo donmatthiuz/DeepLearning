@@ -17,11 +17,24 @@ El presente laboratorio tiene como objetivo comprender y modificar el comportami
 Se debe modificar la función `cost_function` para que, en lugar de calcular el error cuadrático medio (MSE), utilice la función de **binary cross entropy (BCE)**.  
 Esto permitirá que la red se enfoque en la probabilidad de clasificación correcta en tareas binarias.
 
+![Cross binary entropy](imagen-8.png)
+
+Ahora esta función implementa la cross binary entropy, la función devuelve el error promedio en todas las entradas. 
+
 ---
 
 ### **2. Ajuste de las variables delta en la retropropagación**
 En la función `fit`, se deben actualizar las variables `delta1` y `delta2` para reflejar el nuevo cálculo de gradientes que deriva de la función BCE.  
 Este ajuste es esencial para que la propagación hacia atrás funcione correctamente con la nueva función de pérdida.
+
+- Ajuste de delta 2: Ahora la función de salida es la cross binary entropy, por lo que el delta tiene que ser la deriviada de esta función. Revisando documentación, se determinó que la derivada de esta función es la diferencia entre el valor predicho y el valor real. 
+
+![Cross binary entropy](imagen-9.png)
+
+- Ajuste de delta 1: como lo realizamos sobre la misma capa y no sobre la función de pérdida, entonces se mantiene igual. 
+
+![Cross binary entropy](imagen-10.png)
+
 
 ---
 
