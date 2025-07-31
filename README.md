@@ -122,4 +122,6 @@ Hay que tomar en cuenta que las 2 redes tienen arquitecturas diferentes, la prim
 
    
    No cambia nada, realmente la red no se ve un cambio tan sustancial, esto porque los bias no dependen del valor inicial sino de su suma total, esto porque durante la backpropagation se actualizan con valor distinto. 
+
+4. 
 ---
