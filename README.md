@@ -54,14 +54,45 @@ Se debe graficar y comparar la evolución de la función de pérdida durante el 
 ## **Preguntas de análisis**
 
 1. **¿Existen cambios de arquitectura en las 2 redes implementadas?**  
-   Explicar si las modificaciones en la función de pérdida impactan la arquitectura de las redes.
+
+   La red de pythorch esta hecha por 4 capas 1 de entrada,1 salida y 2 de enmedio conformada por 16 neuronas
+
+   ![alt text](image-2.png)
+
+   En cambio la primera la arquitectura esta conformada por 2 neuronas de entrada , 3 de enmedio y una de salida siendo 3 capas
+
+   ![alt text](image-3.png)
 
 2. **¿Existen diferencias en la velocidad de convergencia entre las 2 redes?**  
-   Analizar la gráfica de la función de pérdida y el número de iteraciones necesarias para converger.
+   
+   Si hay una diferencia en la primera fue mucho mas lenta , se tardo en converger en 4500 o 4700 iteraciones. En cambio haciendo uso de pytorch se llego a la convergencia aproximadamente a los 2000 iteraciones, esto indica que pytorch es mucho mas rapida. Y de hecho esta optimizada debido a su uso de operaciones vectorizadas, paralelización interna y optimizaciones a bajo nivel 
 
 3. **Inicialización de parámetros en `init_parameters`:**  
-   - ¿Qué sucede si inicializamos los pesos en `0` en lugar de valores aleatorios?  
-   - ¿Qué ocurre si hacemos lo mismo con los *bias*?  
-   Justificar el impacto que esto tendría en la simetría de los gradientes y el aprendizaje de la red.
+   - ¿Qué sucede si inicializamos los pesos en `0` en lugar de valores aleatorios?
 
+   Al hacerlo sucede esto
+
+   ![alt text](image-4.png)
+
+
+   AL hacerlo pierde acurrancy a 75% y no llega a una convergencia sino que por cada iteracion no disminuye la perdida
+
+   ![alt text](image-5.png)
+
+
+   Esto sucede porque tienen la misma entrada la misma salida y generan la misma backpropagation, por lo que todas las neuronas aprenden lo mismo y solo genera memorizacion no aprendizaje, por ello el acurrancy se estanca
+
+   - ¿Qué ocurre si hacemos lo mismo con los *bias*?
+
+   Si los bias los ponemos a 0 como aqui  
+
+   ![alt text](image-6.png)
+
+
+   Como podemos ver
+
+   ![alt text](image-7.png)
+
+   
+   No cambia nada, realmente la red no se ve un cambio tan sustancial, esto porque los bias no dependen del valor inicial sino de su suma total, esto porque durante la backpropagation se actualizan con valor distinto. 
 ---
