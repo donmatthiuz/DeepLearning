@@ -3,3 +3,5 @@ torchmetrics
 numpy
 pandas
 matplotlib
+statsmodels
+scikit-learn
