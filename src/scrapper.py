@@ -6,7 +6,7 @@ from tqdm import tqdm
 import yt_dlp
 from googleapiclient.discovery import build
 
-API_KEY = "AIzaSyDSOp-zDUGNictntDW8OyLvp-fqvujbWrU"
+
 YOUTUBE = build("youtube", "v3", developerKey=API_KEY)
 urls = ["https://www.youtube.com/shorts/B_CxVGNzefk", "https://www.youtube.com/shorts/FjeouIqEu20", "https://www.youtube.com/watch?v=ejx06woQGA0" ]
 
